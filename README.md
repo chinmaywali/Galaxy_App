@@ -16,7 +16,7 @@ The Galaxy App is an engaging and visually stunning game 🎮 application design
 ## Installation⚙️
 
 1. Clone the repository: `git clone https://github.com/yourusername/galaxy-app.git`
-2. Install the required dependencies by running: `pip install -r ___`(kivy libraries)
+2. Install the required dependencies by running: `pip install requirements.txt`  (kivy libraries)
 3. Run the app using: `python py files and kivy kv files`
 
 ## How to Play 🕹️
