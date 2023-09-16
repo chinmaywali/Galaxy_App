@@ -5,6 +5,8 @@ from kivy.config import Config
 from kivy.core.audio import SoundLoader
 from kivy.lang import Builder
 from kivy.uix.relativelayout import RelativeLayout
+from kivy.uix.widget import Widget
+from kivy.uix.floatlayout import FloatLayout
 
 
 
@@ -37,11 +39,11 @@ class MainWidget(RelativeLayout):
     H_LINES_SPACING = .1
     horizontal_lines = []
 
-    speed = .8
+    speed = .3
     current_offset_y = 0
     current_y_loop = 0
 
-    speed_x = 3.0
+    speed_x = 5
     current_Speed_x = 0
     current_offset_x = 0
 
@@ -72,6 +74,9 @@ class MainWidget(RelativeLayout):
     sound_music1 = None
     sound_restart = None
 
+    speed_increase_interval = 100  # Increase speed every 100 points (adjust as needed)
+    speed_increase_amount = 0.1
+
     def __init__(self,**kwargs):
         super(MainWidget ,self).__init__(**kwargs)
         #print("w:"+str( self.width)+"h:"+str(self.height))
@@ -87,7 +92,7 @@ class MainWidget(RelativeLayout):
         if self.is_desktop():
             self._keyboard = Window.request_keyboard(self.keyboard_closed, self)
             self._keyboard.bind(on_key_down=self.on_keyboard_down)
-            self._keyboard.bind(on_key_up=self.on_keyboard_down)
+            self._keyboard.bind(on_key_up=self.on_keyboard_up)
 
         Clock.schedule_interval(self.update, 1.0 / 60.0)
         self.sound_galaxy.play()
@@ -107,10 +112,45 @@ class MainWidget(RelativeLayout):
         self.sound_music1.volume = 1
         self.sound_restart.volume = .25
 
-    def update(self):
-        current_level = levels[self.current_level]
-        current_level.move_tiles()
-        current_level.check_collision()
+
+
+
+
+    def update(self , dt):
+        time_factor = dt * 60
+        self.update_vertical_lines()
+        self.update_horizontal_lines()
+        self.update_tiles()
+        self.update_vehical()
+
+        if not self.state_game_over and self.state_game_has_started:
+            # Increase speed based on score
+            if self.current_y_loop % self.speed_increase_interval == 0:
+                self.speed += self.speed_increase_amount
+
+            speed_y = self.speed * self.height / 100
+            self.current_offset_y += speed_y * time_factor
+
+            spacing_y = self.H_LINES_SPACING * self.height
+            while self.current_offset_y >= spacing_y:
+                self.current_offset_y -= spacing_y
+                self.current_y_loop += 1
+                self.score_txt = "SCORE: " + str(self.current_y_loop)
+                self.generate_tiles_coordinates()
+                print("loop: " + str(self.current_y_loop))
+
+            Speed_x = self.current_Speed_x * self.width / 100
+            self.current_offset_x += self.current_Speed_x * time_factor
+
+        if not self.check_vehical_collision() and not self.state_game_over:
+            self.state_game_over = True
+            self.menu_title = "G  A  M  E    O  V  E  R"
+            self.menu_button_title = "RESTART"
+            self.menu_widget.opacity = 1
+            self.sound_music1.stop()
+            self.sound_gameover_impact.play()
+            Clock.schedule_once(self.play_game_over_voice_sound, 3)
+            print("game over:")
 
     def reset_game(self):
 
@@ -385,6 +425,17 @@ class MainWidget(RelativeLayout):
         self.state_game_has_started = True
         self.menu_widget.opacity = 0
 
+    def on_keyboard_down(self, keyboard, keycode, text, modifiers):
+        if keycode[1] == 'left':
+            self.current_Speed_x = 10  # Increase the speed to make it turn right faster
+        elif keycode[1] == 'right':
+            self.current_Speed_x = -10  # Increase the speed to make it turn left faster
+        return True
+
+    def on_keyboard_up(self, keyboard, keycode):
+        if keycode[1] in ['right', 'left']:
+            self.current_Speed_x = 0  # Stop turning when the key is released
+        return True
 
 
 class GalaxyApp(App):
