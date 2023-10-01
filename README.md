@@ -2,6 +2,7 @@
 <div align="center">
 <h1 align="center">
 
+
 <br>
 🌌 The Galaxy - App 🚀 
 </h1>
@@ -16,6 +17,12 @@
 | Image 1 | Image 2 | Image 3| 
 | ------- | ------- |------- |
 | ![186](https://github.com/chinmaywali/TaskPro-App/assets/123446377/3c9368ec-fad9-4eb4-84dd-01ce94c0254c) |![2865](https://github.com/chinmaywali/TaskPro-App/assets/123446377/468c106e-dc74-49c5-9699-bb4d9033fdcc) | ![354](https://github.com/chinmaywali/TaskPro-App/assets/123446377/fe8c7693-7595-47d4-9e89-a7ad8484078c) |
+
+---
+
+## Demo
+
+https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3d6-13dbc6dc0dde
 
 ---
 
