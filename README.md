@@ -26,7 +26,7 @@ https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3
 
 ---
 
-## Features🌟
+## Features 🌟
 
 - **Cross-Platform Experience:** The app is developed to run seamlessly on both mobile and desktop devices. Whether you're on the go or relaxing at home, you can enjoy the game on your preferred platform.
 
@@ -40,7 +40,7 @@ https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3
 
 ---
 
-## Installation⚙️
+## Installation ⚙️
 
 1. Clone the repository: `git clone https://github.com/yourusername/galaxy-app.git`
 2. Install the required dependencies by running: `pip install requirements.txt`  (kivy libraries)
