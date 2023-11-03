@@ -2,7 +2,7 @@
 <div align="center">
 <h1 align="center">
 
-
+    
 <br>
 🌌 The Galaxy - App 🚀 
 </h1>
