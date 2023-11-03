@@ -25,7 +25,7 @@
 https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3d6-13dbc6dc0dde
 
 ---
-
+ 
 ## Features 🌟
 
 - **Cross-Platform Experience:** The app is developed to run seamlessly on both mobile and desktop devices. Whether you're on the go or relaxing at home, you can enjoy the game on your preferred platform.
