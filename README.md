@@ -7,7 +7,7 @@
 🌌 The Galaxy - App 🚀 
 </h1>
 <h3> The Galaxy App is an engaging and visually stunning game 🎮 application designed for both mobile and desktop platforms. Built using the Python programming language and the Kivy framework, this project offers a captivating gaming experience while showcasing the potential of cross-platform development.</h3>
-<h3> Developed with Python , Kivy </h3>
+<h3> Developed with Python , Kivy </h3> 
 </div>
 
 ---
