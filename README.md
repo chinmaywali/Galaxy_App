@@ -53,7 +53,7 @@ https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3
 1. Launch the app on your chosen platform.
 2. Navigate through the screens using the provided interface.
 3. Follow the on-screen instructions to start playing the game.
-4. Enjoy the immersive experience and have fun exploring the galaxy!
+4. Enjoy the immersive experience and have fun exploring the galaxy!   
 
 ---
 
