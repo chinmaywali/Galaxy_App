@@ -7,7 +7,7 @@ def keyboard_closed(self):
     self._keyboard = None
 
 def on_keyboard_down(self, keyboard, keycode, text, modifiers):
-    if keycode[1] == 'left':
+    if keycode[1] == 'left':    
         self.current_Speed_x = self.speed_x
     elif keycode[1] == 'right':
         self.current_Speed_x = -self.speed_x
