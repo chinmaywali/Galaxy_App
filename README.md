@@ -56,25 +56,11 @@ https://github.com/chinmaywali/Galaxy_App/assets/123446377/18148cde-e82c-4775-b3
 4. Enjoy the immersive experience and have fun exploring the galaxy!   
 
 ---
+ 
+<div align="center">
+<h1>Thank You</h1>
+</div>
 
-## Contributing 🎉
 
-We welcome contributions from the community! Whether you're interested in adding new features, fixing bugs, or enhancing the UI, feel free to submit a pull request. 
-
----
-
-## Support
-
-If you encounter any issues, have questions, or want to discuss ideas related to the Galaxy App, you can reach out to us by [creating an issue](https://github.com/yourusername/galaxy-app/issues) on this repository.
-
----
-
-## License
-
-The Galaxy App is open-source software released under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
-
----
-
-Buckle up, stargazer! The universe is calling, and *The Galaxy App* is your ticket to explore the cosmos with boundless wonder. Embark on an odyssey that merges technology and artistry, setting your sights on galaxies yet to be explored. The stars await your arrival.🛰️
 
 
